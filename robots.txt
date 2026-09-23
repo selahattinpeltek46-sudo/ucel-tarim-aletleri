@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://selahattinpeltek46-sudo.github.io/ucel-tarim-aletleri/sitemap.xml
