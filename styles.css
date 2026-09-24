@@ -152,13 +152,14 @@ a { color: inherit; }
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 
 .logo-mark {
-  width: 40px; height: 40px;
-  border: 1.5px solid var(--gold);
+  height: 40px; width: auto;
   border-radius: 3px;
   display: flex; align-items: center; justify-content: center;
   color: var(--gold-light);
   flex-shrink: 0;
+  overflow: hidden;
 }
+.logo-mark img { height: 100%; width: auto; display: block; object-fit: contain; }
 
 .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .logo-text strong { font-family: var(--font-display); font-size: 16px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
