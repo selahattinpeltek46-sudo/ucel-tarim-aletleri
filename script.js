@@ -48,6 +48,28 @@ if (tractorForm) {
   });
 }
 
+// İletişim formu -> WhatsApp
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(contactForm);
+    const get = (k) => (fd.get(k) || '').toString().trim();
+    const ad = get('ad');
+    const telefon = get('telefon');
+    const urun = get('urun');
+    const mesaj = get('mesaj');
+
+    let msg = `Merhaba, ben ${ad || 'bir müşteri'}.`;
+    if (telefon) msg += ` Telefon: ${telefon}.`;
+    if (urun) msg += ` İlgilendiğim ürün: ${urun}.`;
+    if (mesaj) msg += ` Mesajım: ${mesaj}`;
+
+    const url = 'https://wa.me/905324803051?text=' + encodeURIComponent(msg);
+    window.open(url, '_blank', 'noopener');
+  });
+}
+
 // Scroll-reveal
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver(entries => {
