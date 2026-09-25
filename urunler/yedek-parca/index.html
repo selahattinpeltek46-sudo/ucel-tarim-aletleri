@@ -135,11 +135,11 @@
     <div class="toki-band reveal" style="margin-top: 30px;">
       <div>
         <h3>Bu Ürün Hakkında <em>Bilgi Alın</em></h3>
-        <p>Fiyat ve güncel stok için WhatsApp'tan bize ulaşın. Traktörünüzün modelini söylerseniz, birlikte en uygun seçeneğe bakarız. Göksun dışına da Türkiye geneline gönderim yapıyoruz.</p>
+        <p>Fiyat, ekipmanın ölçüsüne ve modeline göre değişir; sabit bir liste fiyatı yerine güncel bilgiyi doğrudan sizinle paylaşırız. Traktörünüzün modelini söylerseniz, birlikte en uygun seçeneğe bakarız. Göksun dışına da Türkiye geneline gönderim yapıyoruz.</p>
       </div>
       <div class="toki-tags">
         <a class="btn btn-primary" href="https://wa.me/905324803051?text=Merhaba%2C%20yedek%20par%C3%A7a%20ihtiyac%C4%B1m%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><span>Yedek Parça Sor</span></a>
-        <a class="btn btn-earth" href="https://wa.me/905324803051?text=Merhaba%2C%20Yedek%20Par%C3%A7a%20i%C3%A7in%20teklif%20almak%20istiyorum." target="_blank" rel="noopener"><span>Teklif Al</span></a>
+        <button type="button" class="btn btn-earth" data-quote-trigger data-product="Yedek Parça"><span>Traktörüme Özel Fiyat Teklifi Al</span></button>
         <a class="btn btn-ghost" href="../../#traktor"><span>Traktörüme Uygun mu?</span></a>
         <a class="btn btn-ghost" href="tel:+905324803051"><span>Hemen Ara</span></a>
       </div>
@@ -203,6 +203,21 @@
   <a href="https://wa.me/905324803051" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Z" stroke="currentColor" stroke-width="1.5"/></svg><span>WhatsApp</span></a>
   <a href="../../urunler/"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="10" r="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M21 16l-5.5-5.5a1 1 0 0 0-1.4 0L6 19" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>Ürünler</span></a>
 </nav>
+
+<div class="quote-modal" id="quoteModal" aria-hidden="true">
+  <div class="quote-modal-overlay" data-modal-close></div>
+  <div class="quote-modal-panel" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <button type="button" class="quote-modal-close" data-modal-close aria-label="Kapat">&times;</button>
+    <h3 id="quoteModalTitle">Traktörünüze Özel Teklif</h3>
+    <p class="quote-modal-desc">Traktörünüzü ve bölgenizi belirtin, size özel bir WhatsApp mesajı hazırlayalım — fiyat ve gönderim seçeneklerini birlikte konuşuruz.</p>
+    <form id="quoteForm" class="tractor-form">
+      <label>Traktör Marka / Model<input type="text" name="traktor" placeholder="Örn. New Holland TT75" autocomplete="off"></label>
+      <label>Beygir Gücü (HP)<input type="text" name="hp" placeholder="Örn. 75 HP" autocomplete="off"></label>
+      <label>İl / İlçe<input type="text" name="il" placeholder="Örn. Göksun / Kahramanmaraş" autocomplete="off"></label>
+      <button type="submit" class="btn btn-primary" style="width:100%; border:none; cursor:pointer; margin-top:6px;"><span>WhatsApp'tan Teklif İste</span></button>
+    </form>
+  </div>
+</div>
 
 <script src="../../script.js"></script>
 </body>

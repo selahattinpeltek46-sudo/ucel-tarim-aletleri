@@ -70,6 +70,58 @@ if (contactForm) {
   });
 }
 
+// Traktörüme özel fiyat teklifi modalı
+const quoteModal = document.getElementById('quoteModal');
+if (quoteModal) {
+  const quoteForm = document.getElementById('quoteForm');
+  let currentProduct = '';
+
+  const openQuoteModal = (product) => {
+    currentProduct = product || 'ürün';
+    quoteModal.classList.add('open');
+    quoteModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    const firstInput = quoteForm.querySelector('input');
+    if (firstInput) firstInput.focus();
+  };
+
+  const closeQuoteModal = () => {
+    quoteModal.classList.remove('open');
+    quoteModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('[data-quote-trigger]').forEach(btn => {
+    btn.addEventListener('click', () => openQuoteModal(btn.getAttribute('data-product')));
+  });
+
+  quoteModal.querySelectorAll('[data-modal-close]').forEach(el => {
+    el.addEventListener('click', closeQuoteModal);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && quoteModal.classList.contains('open')) closeQuoteModal();
+  });
+
+  quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(quoteForm);
+    const get = (k) => (fd.get(k) || '').toString().trim();
+    const traktor = get('traktor');
+    const hp = get('hp');
+    const il = get('il');
+
+    let msg = `Merhaba, ${traktor || 'traktörüm'} için ${currentProduct} fiyat teklifi almak istiyorum.`;
+    if (hp) msg += ` Beygir gücü: ${hp}.`;
+    if (il) msg += ` Bölge: ${il}.`;
+
+    const url = 'https://wa.me/905324803051?text=' + encodeURIComponent(msg);
+    window.open(url, '_blank', 'noopener');
+    closeQuoteModal();
+    quoteForm.reset();
+  });
+}
+
 // Scroll-reveal
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver(entries => {

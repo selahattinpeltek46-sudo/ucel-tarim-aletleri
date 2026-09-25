@@ -758,3 +758,65 @@ a.b2b-card p { color: var(--gold-light); font-weight: 600; margin: 0; }
   body { padding-bottom: 60px; }
   .product-hero-gallery { grid-template-columns: 1fr; }
 }
+
+/* Fiyat teklifi modalı */
+.quote-modal { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 20px; }
+.quote-modal.open { display: flex; }
+.quote-modal-overlay { position: absolute; inset: 0; background: rgba(11,11,12,0.72); backdrop-filter: blur(2px); }
+.quote-modal-panel {
+  position: relative;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  max-width: 440px; width: 100%;
+  padding: 34px 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  animation: quoteModalIn 0.25s ease;
+}
+@keyframes quoteModalIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.quote-modal-close {
+  position: absolute; top: 12px; right: 12px;
+  width: 34px; height: 34px; border: none; background: transparent;
+  color: var(--white-dim); font-size: 24px; line-height: 1; cursor: pointer;
+}
+.quote-modal-close:hover { color: var(--white); }
+.quote-modal-panel h3 { font-family: var(--font-display); font-size: 21px; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 10px; padding-right: 24px; }
+.quote-modal-desc { font-size: 13.5px; color: var(--white-dim); line-height: 1.6; margin-bottom: 22px; }
+.quote-modal-panel .tractor-form { gap: 16px; margin-top: 0; }
+@media (max-width: 480px) {
+  .quote-modal-panel { padding: 28px 20px; }
+}
+
+/* Durum rozetleri: İkinci El / Takas ürün kartları için.
+   Yalnızca gerçekten doğru olduğunda kullanılmalı — sahte aciliyet/kıtlık iması yaratmamalı. */
+.status-badge {
+  position: absolute; top: 14px; left: 14px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+  border-radius: 3px; color: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+.status-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+.status-badge.badge-green  { background: #1e7a3f; }
+.status-badge.badge-orange { background: #b5651d; }
+.status-badge.badge-red    { background: #9c2b2b; }
+.status-badge.badge-gray   { background: #46464a; color: #d8d7d4; }
+.status-badge.badge-inline { position: static; display: inline-flex; margin-bottom: 12px; box-shadow: none; }
+.product-thumb { position: relative; }
+
+/* Google yorumları — dürüst bağlantı kartı (gerçek yorum metni eklenene kadar) */
+.reviews-linkout {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 22px;
+  border: 1px solid var(--line); border-radius: 4px;
+  padding: 30px 32px; background: var(--ink-2);
+}
+.reviews-linkout-icon { flex-shrink: 0; color: var(--gold-light); }
+.reviews-linkout h3 { font-family: var(--font-display); font-size: 19px; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 8px; }
+.reviews-linkout h3 em { color: var(--gold-light); font-style: normal; }
+.reviews-linkout p { font-size: 14px; color: var(--white-dim); line-height: 1.6; max-width: 480px; }
+.reviews-linkout .btn { margin-left: auto; }
+@media (max-width: 720px) {
+  .reviews-linkout { flex-direction: column; align-items: flex-start; text-align: left; padding: 26px 24px; }
+  .reviews-linkout .btn { margin-left: 0; }
+}
