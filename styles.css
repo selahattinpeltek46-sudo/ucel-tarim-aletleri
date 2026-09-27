@@ -521,6 +521,12 @@ a { color: inherit; }
 .spec-table th { color: var(--white); font-weight: 600; width: 42%; }
 .spec-table td { color: var(--white-dim); }
 .spec-table td.spec-unknown { color: var(--white-dim); font-style: italic; opacity: 0.8; }
+.spec-status-pending {
+  display: inline-block; margin-left: 6px; padding: 1px 7px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;
+  border: 1px solid var(--gold-dim); color: var(--gold-light); border-radius: 3px;
+  vertical-align: middle;
+}
 .btn-earth { background: var(--earth); color: var(--ink); }
 .btn-earth:hover { box-shadow: 0 8px 22px rgba(107, 74, 47, 0.28); }
 
