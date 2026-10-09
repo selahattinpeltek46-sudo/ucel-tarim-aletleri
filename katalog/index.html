@@ -48,8 +48,8 @@ section, .urun { scroll-margin-top: 8px; }
 .kapak-foto { background: #fff; padding: 12px 16px; border-bottom: 5px solid var(--k); }
 .ust-buton { display: grid; grid-template-columns: 1.6fr 1fr; gap: 10px; padding: 14px 16px; background: var(--d); }
 /* buton */
-.btn { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 14px; border-radius: 10px; font: 700 16px/1.2 'Inter'; text-decoration: none; text-align: center; }
-.btn svg { width: 22px; height: 22px; flex: none; }
+.btn { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 8px 16px; border-radius: 10px; font: 700 16px/1.2 'Inter'; text-decoration: none; text-align: center; }
+.btn svg { width: 24px; height: 24px; flex: none; }
 .btn.wa { background: var(--wa); color: #fff; } .btn.tel { background: var(--d); color: #fff; } .btn.acik { background: #fff; color: var(--d); border: 2px solid var(--c); }
 /* bölüm */
 .blok { padding: 26px 16px; }
@@ -59,8 +59,9 @@ section, .urun { scroll-margin-top: 8px; }
 .aciklama { color: var(--g); }
 /* iş seçimi */
 .isler { display: grid; gap: 8px; margin-top: 12px; }
-.isler a { display: flex; justify-content: space-between; align-items: center; gap: 10px; background: #fff; border-radius: 10px; padding: 13px 14px; text-decoration: none; border-left: 5px solid var(--k); }
-.isler b { font: 500 18px/1.2 'Oswald'; } .isler span { font-size: 14px; color: var(--k); font-weight: 700; text-align: right; }
+.isler .is { display: flex; justify-content: space-between; align-items: center; gap: 10px; background: #fff; border-radius: 10px; padding: 10px 12px 10px 14px; border-left: 5px solid var(--k); }
+.isler b { font: 500 18px/1.2 'Oswald'; } .isler span { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.isler a { font-size: 15px; color: var(--k); font-weight: 700; text-decoration: none; padding: 6px 0; text-align: right; }
 /* ürün */
 .urun { background: #fff; margin: 0 0 18px; border-top: 6px solid var(--k); }
 .u-foto { aspect-ratio: 10 / 7; display: flex; align-items: center; justify-content: center; }
@@ -71,11 +72,11 @@ section, .urun { scroll-margin-top: 8px; }
 .fayda { font: 500 21px/1.3 'Oswald'; }
 .cips { list-style: none; padding: 0; margin: 4px 0 14px; display: flex; flex-wrap: wrap; gap: 8px; }
 .cips li { background: var(--z); border: 1px solid var(--c); border-radius: 99px; padding: 6px 12px; font-size: 15px; font-weight: 700; }
-.kimler { background: var(--z); border-left: 5px solid var(--k); padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 16px; }
+.kimler { background: #F1EFEB; border-left: 4px solid var(--d); padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 16px; }
 .kimler b { color: var(--k); }
 .fiyat { border: 2px solid var(--d); border-radius: 10px; padding: 12px 14px; margin: 14px 0; }
 .fiyat b { display: block; font: 700 19px/1.2 'Oswald'; margin-bottom: 4px; } .fiyat b small { font: 400 13px 'Inter'; color: var(--g); }
-.fiyat.bos { border-style: dashed; border-color: var(--k); background: #FFF6F7; } .fiyat.bos span { font-size: 15px; }
+.fiyat.bos { border: 0; border-left: 4px solid var(--wa); border-radius: 0 10px 10px 0; background: #EEF7F1; } .fiyat.bos span { font-size: 15px; }
 .fiyat ul { list-style: none; margin: 0; padding: 0; } .fiyat li { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-top: 1px solid var(--c); }
 .fiyat strong { color: var(--k); white-space: nowrap; }
 .tablo-kap { overflow-x: auto; margin: 0 0 14px; } table { border-collapse: collapse; font-size: 15px; min-width: 100%; }
@@ -83,6 +84,19 @@ th, td { padding: 8px 10px; border-bottom: 1px solid var(--c); text-align: left;
 details { border-top: 1px solid var(--c); border-bottom: 1px solid var(--c); margin: 14px 0; }
 summary { cursor: pointer; padding: 13px 0; font: 700 16px 'Inter'; list-style: none; display: flex; justify-content: space-between; }
 summary::after { content: '+'; color: var(--k); font-size: 22px; line-height: 1; } details[open] summary::after { content: '–'; }
+.rozet { display: inline-block; margin: 0 0 8px; font: 700 13px/1 'Inter'; letter-spacing: .6px; text-transform: uppercase; color: #fff; background: var(--k); padding: 7px 10px; border-radius: 6px; }
+.avantaj { background: #fff; border: 2px solid var(--c); border-radius: 10px; padding: 12px 14px 6px; margin: 14px 0; }
+.avantaj ul { list-style: none; padding: 0; margin: 0; } .avantaj li { display: flex; gap: 10px; padding: 6px 0; font-size: 16px; font-weight: 700; border-top: 1px solid var(--z); }
+.avantaj li:first-child { border-top: 0; } .avantaj svg { width: 22px; height: 22px; flex: none; color: #fff; background: var(--k); border-radius: 50%; padding: 3px; }
+.destek ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.destek li { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 10px; padding: 12px 14px; }
+.destek li svg { width: 28px; height: 28px; flex: none; color: var(--k); } .destek b { display: block; font: 500 18px/1.2 'Oswald'; } .destek span { font-size: 15px; color: var(--g); }
+button.buyut { all: unset; display: block; cursor: zoom-in; width: 100%; }
+dialog#kutu { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 92vh; }
+dialog#kutu::backdrop { background: rgba(0,0,0,.88); }
+dialog#kutu img { max-width: 96vw; max-height: 80vh; border-radius: 8px; margin: 0 auto; }
+dialog#kutu p { color: #fff; font-size: 15px; text-align: center; margin: 10px 0 0; }
+dialog#kutu .kapat { position: fixed; top: 12px; right: 12px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: #fff; color: var(--d); font-size: 30px; line-height: 1; cursor: pointer; }
 .tikli { list-style: none; padding: 0; margin: 0 0 12px; } .tikli li { display: flex; gap: 8px; padding: 4px 0; font-size: 16px; } .tikli svg { width: 20px; height: 20px; color: var(--k); flex: none; margin-top: 2px; }
 .ara { font: 700 13px 'Inter'; letter-spacing: 1px; text-transform: uppercase; color: var(--k); margin: 6px 0 4px; }
 .ek-foto { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; } .ek-foto img { border-radius: 8px; aspect-ratio: 4 / 3; object-fit: cover; width: 100%; } .ek-foto figcaption { font-size: 14px; color: var(--g); margin-top: 4px; }
@@ -129,13 +143,25 @@ summary::after { content: '+'; color: var(--k); font-size: 22px; line-height: 1;
   <p class="etk">Ekipman seçimi</p>
   <h2>Ne yapmak istiyorsunuz?</h2>
   <p class="aciklama">İşinizi bulun, size uygun ekipmanı görün.</p>
-  <div class="isler"><a href="#pulluk"><b>Toprağı hazırlıyorum</b><span>Pulluk · Kültivatör / Tapan →</span></a><a href="#gubre-serpme"><b>Gübreleme yapacağım</b><span>Gübre Serpme Makinesi →</span></a><a href="#romork"><b>Taşıma yapacağım</b><span>Tarım Römorku →</span></a><a href="#su-tankeri"><b>Su taşıyacağım</b><span>Su Tankeri →</span></a><a href="#on-yukleyici"><b>Yükleme yapacağım</b><span>Loader Kepçe →</span></a><a href="#diger"><b>Ekime hazırlanıyorum</b><span>Mibzer →</span></a><a href="#takas"><b>İkinci el bakıyorum / takas</b><span>İkinci el & takas →</span></a></div>
+  <div class="isler"><div class="is"><b>Taşıma yapacağım</b><span><a href="#romork">Tarım Römorku →</a></span></div><div class="is"><b>Toprağı hazırlıyorum</b><span><a href="#kultivator">Kültivatör / Tapan →</a><a href="#pulluk">Pulluk →</a></span></div><div class="is"><b>Yükleme yapacağım</b><span><a href="#on-yukleyici">Loader Kepçe →</a></span></div><div class="is"><b>Gübreleme yapacağım</b><span><a href="#gubre-serpme">Gübre Serpme Makinesi →</a></span></div><div class="is"><b>Su taşıyacağım</b><span><a href="#su-tankeri">Su Tankeri →</a></span></div><div class="is"><b>Ekime hazırlanıyorum</b><span><a href="#diger">Mibzer →</a></span></div><div class="is"><b>İkinci el bakıyorum / takas</b><span><a href="#takas">İkinci el & takas →</a></span></div></div>
+</section>
+
+<section class="blok destek" id="destek">
+  <p class="etk">Teslimat ve destek</p>
+  <h2>Göksun'dan Türkiye'ye</h2>
+  <ul>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M2 7h11v9H2zM13 10h5l3 3v3h-8z"/><circle cx="6" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17.5" r="1.8" fill="none" stroke="currentColor" stroke-width="2"/></svg><div><b>Türkiye geneline gönderim</b><span>Şehrinizi yazın, nakliye seçeneğini birlikte belirleyelim.</span></div></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21c-4-4-7-7.5-7-11a7 7 0 0 1 14 0c0 3.5-3 7-7 11z"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><div><b>Göksun ve çevresine yerinde</b><span>Atölyemize gelip ürünleri yerinde inceleyebilirsiniz.</span></div></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><div><b>Yedek parça</b><span>Ürettiğimiz ve sattığımız ürünler için.</span></div></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 8h13l-3-3M20 16H7l3 3"/></svg><div><b>İkinci el ve takas</b><span>Eski makinenizi değerlendiriyoruz.</span></div></li>
+  </ul>
 </section>
 
 <article class="urun" id="romork">
     <div class="u-foto beyaz"><img src="img/tarim-romorku-yesil-traktor-1000.webp" alt="Tarım Römorku" loading="lazy" width="1000" height="700"></div>
     <div class="u-ic">
-      <p class="etk">Taşıma · <span>Kendi imalatımız</span></p>
+      <p class="etk">Taşıma</p>
+      <p class="rozet">Kendi imalatımız · Göksun atölyesi</p>
       <h2>Tarım Römorku</h2>
       <p class="fayda">Ürününüzü, yeminizi, odununuzu tek römorkla taşıyın.</p>
       <p>Tarladan eve, depodan tarlaya yük taşımanın temel ekipmanı. Kaynağından boyasına kadar Göksun'daki atölyemizde üretiyoruz.</p>
@@ -143,11 +169,8 @@ summary::after { content: '+'; color: var(--k); font-size: 22px; line-height: 1;
       <p class="kimler"><b>Kimler için?</b> Ürün taşıyan, hayvancılık yapan, gübre ve yem nakli olan ya da genel taşıma ihtiyacı olan çiftçiler için.</p>
       <div class="fiyat bos"><b>Fiyat ve uygun model</b><span>Bize üç şey yazın: Traktörünüz (marka / model) · Beygir gücü (HP) · Yapacağınız iş</span></div>
       
-      <details><summary>Neden Üçel? · Seçenekler</summary>
-        <ul class="tikli"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kaynağından boyasına kadar atölyemizde üretiyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kasa rengini ve yazısını isteğinize göre yapıyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Standart dışı ölçüde özel imalat yapabiliyoruz.</li></ul>
-        <p class="ara">Seçenekler</p><ul class="tikli"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kasa rengi size özel</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kasaya isim, firma adı ya da “Maşallah” yazısı</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Standart dışı ölçüde özel imalat</li></ul>
-        <div class="ek-foto"><figure><img src="img/tarim-romorku-mavi-600.webp" alt="Mavi kasa" loading="lazy"><figcaption>Mavi kasa</figcaption></figure><figure><img src="img/tarim-romorku-yesil-teslimat-600.webp" alt="Teslimatta" loading="lazy"><figcaption>Teslimatta</figcaption></figure></div>
-      </details>
+      <div class="avantaj"><p class="ara">Üçel imalat avantajları</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kaynağından boyasına kadar atölyemizde üretiyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kasa rengini ve yazısını isteğinize göre yapıyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Standart dışı ölçüde özel imalat yapabiliyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kasaya isim, firma adı ya da “Maşallah” yazısı</li></ul></div>
+      <div class="ek-foto"><figure><button type="button" class="buyut" data-buyuk="img/tarim-romorku-mavi-1400.webp" aria-label="Büyüt: Mavi kasa"><img src="img/tarim-romorku-mavi-600.webp" alt="Mavi kasa" loading="lazy"></button><figcaption>Mavi kasa</figcaption></figure><figure><button type="button" class="buyut" data-buyuk="img/tarim-romorku-yesil-teslimat-1400.webp" aria-label="Büyüt: Teslimatta"><img src="img/tarim-romorku-yesil-teslimat-600.webp" alt="Teslimatta" loading="lazy"></button><figcaption>Teslimatta</figcaption></figure></div>
       <p class="cta-yazi">Ne taşıyacağınızı yazın, uygun römorku birlikte belirleyelim.</p>
       <div class="butonlar"><a class="btn wa " data-msg="Merhaba, tarım römorku hakkında bilgi almak istiyorum.
 Taşıyacağım yük:
@@ -157,7 +180,8 @@ Traktörüm:" href="https://wa.me/905324803051?text=Merhaba%2C%20tar%C4%B1m%20r%
 <article class="urun" id="kultivator">
     <div class="u-foto beyaz"><img src="img/yayli-kultivator-kirmizi-2-1000.webp" alt="Kültivatör / Tapan" loading="lazy" width="1000" height="700"></div>
     <div class="u-ic">
-      <p class="etk">Toprak işleme · <span>Kendi imalatımız</span></p>
+      <p class="etk">Toprak işleme</p>
+      <p class="rozet">Kendi imalatımız · Göksun atölyesi</p>
       <h2>Kültivatör / Tapan</h2>
       <p class="fayda">Pulluktan sonra toprağı inceltir, tohum yatağını hazırlar.</p>
       <p>Pullukla işlenmiş toprağın yüzeyini inceltip tohum yatağını hazırlayan ekipman. Göksun Sanayi Sitesi'ndeki atölyemizde üretiyoruz.</p>
@@ -165,43 +189,19 @@ Traktörüm:" href="https://wa.me/905324803051?text=Merhaba%2C%20tar%C4%B1m%20r%
       <p class="kimler"><b>Kimler için?</b> Ekim öncesi toprak yüzeyini hazırlamak ve yabani otla mücadele etmek isteyen çiftçiler için.</p>
       <div class="fiyat bos"><b>Fiyat ve uygun model</b><span>Bize üç şey yazın: Traktörünüz (marka / model) · Beygir gücü (HP) · Yapacağınız iş</span></div>
       
-      <details><summary>Neden Üçel? · Seçenekler</summary>
-        <ul class="tikli"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Göksun'daki atölyemizde üretiyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Yaylı ayak sistemi</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Farklı ayak sayısı ve ebat seçenekleri</li></ul>
-        <p class="ara">Seçenekler</p><ul class="tikli"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Farklı ayak sayısı ve ebat seçenekleri</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kırmızı ve mavi renk</li></ul>
-        <div class="ek-foto"><figure><img src="img/yayli-kultivator-mavi-2-600.webp" alt="Mavi renkte" loading="lazy"><figcaption>Mavi renkte</figcaption></figure><figure><img src="img/kultivator-mavi-saha-600.webp" alt="Mavi Göksun kültivatör" loading="lazy"><figcaption>Mavi Göksun kültivatör</figcaption></figure></div>
-      </details>
+      <div class="avantaj"><p class="ara">Üçel imalat avantajları</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Göksun'daki atölyemizde üretiyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Yaylı ayak sistemi</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Farklı ayak sayısı ve ebat seçenekleri</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kırmızı ve mavi renk</li></ul></div>
+      <div class="ek-foto"><figure><button type="button" class="buyut" data-buyuk="img/yayli-kultivator-mavi-2-1400.webp" aria-label="Büyüt: Mavi renkte"><img src="img/yayli-kultivator-mavi-2-600.webp" alt="Mavi renkte" loading="lazy"></button><figcaption>Mavi renkte</figcaption></figure><figure><button type="button" class="buyut" data-buyuk="img/kultivator-mavi-saha-1400.webp" aria-label="Büyüt: Mavi Göksun kültivatör"><img src="img/kultivator-mavi-saha-600.webp" alt="Mavi Göksun kültivatör" loading="lazy"></button><figcaption>Mavi Göksun kültivatör</figcaption></figure></div>
       <p class="cta-yazi">Traktörünüzün gücünü yazın, uygun modeli birlikte seçelim.</p>
       <div class="butonlar"><a class="btn wa " data-msg="Merhaba, kültivatör hakkında bilgi almak istiyorum.
 Traktör / HP:
 Tarla büyüklüğü:" href="https://wa.me/905324803051?text=Merhaba%2C%20k%C3%BCltivat%C3%B6r%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0ATrakt%C3%B6r%20%2F%20HP%3A%0ATarla%20b%C3%BCy%C3%BCkl%C3%BC%C4%9F%C3%BC%3A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Fiyat ve bilgi al</span></a><a class="btn tel " href="tel:+905324803051"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Ara</span></a></div>
     </div>
   </article>
-<article class="urun" id="on-yukleyici">
-    <div class="u-foto beyaz"><img src="img/on-yukleyici-traktor-1000.webp" alt="Loader Kepçe" loading="lazy" width="1000" height="700"></div>
-    <div class="u-ic">
-      <p class="etk">Yükleme · <span>Kendi imalatımız</span></p>
-      <h2>Loader Kepçe</h2>
-      <p class="fayda">Yem, gübre ve malzemeyi traktörünüzle kaldırın, taşıyın.</p>
-      <p>Traktörünüze monte edilen, yem, gübre ve malzeme gibi yükleri kaldırıp taşımanızı sağlayan sistem. Kendi atölyemizde imal ediyoruz.</p>
-      <ul class="cips"><li>Yükleme-boşaltma</li><li>Ahır ve çiftlik işleri</li><li>Malzeme taşıma</li></ul>
-      <p class="kimler"><b>Kimler için?</b> Ahır ve çiftlik işleri yapan, düzenli yükleme-boşaltma ihtiyacı olan çiftçiler için.</p>
-      <div class="fiyat bos"><b>Fiyat ve uygun model</b><span>Bize üç şey yazın: Traktörünüz (marka / model) · Beygir gücü (HP) · Yapacağınız iş</span></div>
-      
-      <details><summary>Neden Üçel? · Seçenekler</summary>
-        <ul class="tikli"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kendi atölyemizde imal ediyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Montaj uygunluğunu traktör modelinize göre birlikte değerlendiriyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kırmızı ve mavi renk örnekleri</li></ul>
-        <p class="ara">Seçenekler</p><ul class="tikli"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kırmızı ve mavi renk</li></ul>
-        <div class="ek-foto"><figure><img src="img/on-yukleyici-atolye-600.webp" alt="Atölyemizin önünde" loading="lazy"><figcaption>Atölyemizin önünde</figcaption></figure><figure><img src="img/on-yukleyici-kubota-600.webp" alt="Kubota traktöre montaj" loading="lazy"><figcaption>Kubota traktöre montaj</figcaption></figure></div>
-      </details>
-      <p class="cta-yazi">Traktörünüzün marka ve modelini yazın, montaja uygunluğuna bakalım.</p>
-      <div class="butonlar"><a class="btn wa " data-msg="Merhaba, loader kepçe hakkında bilgi almak istiyorum.
-Traktör marka / model:
-HP:" href="https://wa.me/905324803051?text=Merhaba%2C%20loader%20kep%C3%A7e%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0ATrakt%C3%B6r%20marka%20%2F%20model%3A%0AHP%3A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Fiyat ve bilgi al</span></a><a class="btn tel " href="tel:+905324803051"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Ara</span></a></div>
-    </div>
-  </article>
 <article class="urun" id="pulluk">
     <div class="u-foto koyu"><img src="img/kulakli-pulluk-1000.webp" alt="Pulluk" loading="lazy" width="1000" height="700"></div>
     <div class="u-ic">
       <p class="etk">Toprak işleme</p>
+      
       <h2>Pulluk</h2>
       <p class="fayda">Ekim öncesi tarlanızı derin işleyin.</p>
       <p>Tarlanın ekim öncesi derin işlenmesinde kullanılan temel ekipman. Toprağınıza ve traktörünüzün gücüne uygun pulluk, traktörünüzü gereksiz yormaz.</p>
@@ -209,21 +209,39 @@ HP:" href="https://wa.me/905324803051?text=Merhaba%2C%20loader%20kep%C3%A7e%20ha
       <p class="kimler"><b>Kimler için?</b> Tarlasını ekim öncesi derin işlemek isteyen, anız bozacak çiftçiler için.</p>
       <div class="fiyat bos"><b>Fiyat ve uygun model</b><span>Bize üç şey yazın: Traktörünüz (marka / model) · Beygir gücü (HP) · Yapacağınız iş</span></div>
       
-      <details><summary>Neden Üçel? </summary>
-        <ul class="tikli"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Traktörünüzün gücüne uygun pulluğu birlikte seçiyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sattığımız ve sık kullanılan ekipmanlar için yedek parça bulunduruyoruz.</li></ul>
-        
-        
-      </details>
+      <div class="avantaj"><p class="ara">Neden Üçel?</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Traktörünüzün gücüne uygun pulluğu birlikte seçiyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sattığımız ve sık kullanılan ekipmanlar için yedek parça bulunduruyoruz.</li></ul></div>
+      
       <p class="cta-yazi">Toprağınızı ve traktörünüzü anlatın, uygun pulluğu birlikte seçelim.</p>
       <div class="butonlar"><a class="btn wa " data-msg="Merhaba, pulluk hakkında bilgi almak istiyorum.
 Traktör / HP:
 Toprak yapısı:" href="https://wa.me/905324803051?text=Merhaba%2C%20pulluk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0ATrakt%C3%B6r%20%2F%20HP%3A%0AToprak%20yap%C4%B1s%C4%B1%3A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Fiyat ve bilgi al</span></a><a class="btn tel " href="tel:+905324803051"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Ara</span></a></div>
     </div>
   </article>
+<article class="urun" id="on-yukleyici">
+    <div class="u-foto beyaz"><img src="img/on-yukleyici-traktor-1000.webp" alt="Loader Kepçe" loading="lazy" width="1000" height="700"></div>
+    <div class="u-ic">
+      <p class="etk">Yükleme</p>
+      <p class="rozet">Kendi imalatımız · Göksun atölyesi</p>
+      <h2>Loader Kepçe</h2>
+      <p class="fayda">Yem, gübre ve malzemeyi traktörünüzle kaldırın, taşıyın.</p>
+      <p>Traktörünüze monte edilen, yem, gübre ve malzeme gibi yükleri kaldırıp taşımanızı sağlayan sistem. Kendi atölyemizde imal ediyoruz.</p>
+      <ul class="cips"><li>Yükleme-boşaltma</li><li>Ahır ve çiftlik işleri</li><li>Malzeme taşıma</li></ul>
+      <p class="kimler"><b>Kimler için?</b> Ahır ve çiftlik işleri yapan, düzenli yükleme-boşaltma ihtiyacı olan çiftçiler için.</p>
+      <div class="fiyat bos"><b>Fiyat ve uygun model</b><span>Bize üç şey yazın: Traktörünüz (marka / model) · Beygir gücü (HP) · Yapacağınız iş</span></div>
+      
+      <div class="avantaj"><p class="ara">Üçel imalat avantajları</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kendi atölyemizde imal ediyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Montaj uygunluğunu traktör modelinize göre birlikte değerlendiriyoruz.</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kırmızı ve mavi renk örnekleri</li></ul></div>
+      <div class="ek-foto"><figure><button type="button" class="buyut" data-buyuk="img/on-yukleyici-atolye-1400.webp" aria-label="Büyüt: Atölyemizin önünde"><img src="img/on-yukleyici-atolye-600.webp" alt="Atölyemizin önünde" loading="lazy"></button><figcaption>Atölyemizin önünde</figcaption></figure><figure><button type="button" class="buyut" data-buyuk="img/on-yukleyici-kubota-1400.webp" aria-label="Büyüt: Kubota traktöre montaj"><img src="img/on-yukleyici-kubota-600.webp" alt="Kubota traktöre montaj" loading="lazy"></button><figcaption>Kubota traktöre montaj</figcaption></figure></div>
+      <p class="cta-yazi">Traktörünüzün marka ve modelini yazın, montaja uygunluğuna bakalım.</p>
+      <div class="butonlar"><a class="btn wa " data-msg="Merhaba, loader kepçe hakkında bilgi almak istiyorum.
+Traktör marka / model:
+HP:" href="https://wa.me/905324803051?text=Merhaba%2C%20loader%20kep%C3%A7e%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0ATrakt%C3%B6r%20marka%20%2F%20model%3A%0AHP%3A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Fiyat ve bilgi al</span></a><a class="btn tel " href="tel:+905324803051"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Ara</span></a></div>
+    </div>
+  </article>
 <article class="urun" id="gubre-serpme">
     <div class="u-foto koyu"><img src="img/romork-ve-gubre-serpme-1000.webp" alt="Gübre Serpme Makinesi" loading="lazy" width="1000" height="700"></div>
     <div class="u-ic">
       <p class="etk">Gübreleme</p>
+      
       <h2>Gübre Serpme Makinesi</h2>
       <p class="fayda">Gübreyi tarlanıza dengeli dağıtın.</p>
       <p>Kimyasal ya da organik gübreyi tarlanıza dengeli şekilde dağıtmanızı sağlayan, traktör arkasına monte edilen makine.</p>
@@ -231,11 +249,8 @@ Toprak yapısı:" href="https://wa.me/905324803051?text=Merhaba%2C%20pulluk%20ha
       <p class="kimler"><b>Kimler için?</b> Düzenli gübreleme yapan çiftçiler için.</p>
       <div class="fiyat bos"><b>Fiyat ve uygun model</b><span>Bize üç şey yazın: Traktörünüz (marka / model) · Beygir gücü (HP) · Yapacağınız iş</span></div>
       
-      <details><summary>Neden Üçel? </summary>
-        <ul class="tikli"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sattığımız ve sık kullanılan ekipmanlar için yedek parça bulunduruyoruz.</li></ul>
-        
-        
-      </details>
+      <div class="avantaj"><p class="ara">Neden Üçel?</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sattığımız ve sık kullanılan ekipmanlar için yedek parça bulunduruyoruz.</li></ul></div>
+      
       <p class="cta-yazi">Traktörünüzü ve gübre türünü yazın, uygun makineyi birlikte seçelim.</p>
       <div class="butonlar"><a class="btn wa " data-msg="Merhaba, gübre serpme makinesi hakkında bilgi almak istiyorum.
 Traktör / HP:
@@ -246,6 +261,7 @@ Gübre türü (kimyasal / organik):" href="https://wa.me/905324803051?text=Merha
     <div class="u-foto beyaz"><img src="img/su-tankeri-2-1000.webp" alt="Su Tankeri" loading="lazy" width="1000" height="700"></div>
     <div class="u-ic">
       <p class="etk">Taşıma</p>
+      
       <h2>Su Tankeri</h2>
       <p class="fayda">Tarlaya da, hayvana da suyu traktörünüzle taşıyın.</p>
       <p>Tarla sulaması ve genel su taşımacılığı için traktörle çekilen tanker.</p>
@@ -253,11 +269,8 @@ Gübre türü (kimyasal / organik):" href="https://wa.me/905324803051?text=Merha
       <p class="kimler"><b>Kimler için?</b> Sulama ihtiyacı olan ya da düzenli su taşıyan çiftçiler için.</p>
       <div class="fiyat bos"><b>Fiyat ve uygun model</b><span>Bize üç şey yazın: Traktörünüz (marka / model) · Beygir gücü (HP) · Yapacağınız iş</span></div>
       
-      <details><summary>Neden Üçel? </summary>
-        <ul class="tikli"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sattığımız ve sık kullanılan ekipmanlar için yedek parça bulunduruyoruz.</li></ul>
-        
-        
-      </details>
+      <div class="avantaj"><p class="ara">Neden Üçel?</p><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Sattığımız ve sık kullanılan ekipmanlar için yedek parça bulunduruyoruz.</li></ul></div>
+      
       <p class="cta-yazi">Suyu ne için taşıyacağınızı yazın, uygun tankeri birlikte seçelim.</p>
       <div class="butonlar"><a class="btn wa " data-msg="Merhaba, su tankeri hakkında bilgi almak istiyorum.
 Kullanım (sulama / hayvan suyu):
@@ -286,7 +299,7 @@ Traktörüm:" href="https://wa.me/905324803051?text=Merhaba%2C%20bir%20ekipman%2
   <h2>Eski makinenizi değerlendirelim</h2>
   <p>Kullanmadığınız aletinizi yeni ya da ikinci el bir ekipmanla takas edebiliriz.</p>
   <ol class="adim"><li>Fotoğrafını çekin</li><li>WhatsApp'tan durumuyla birlikte gönderin</li><li>Ekipmanı birlikte değerlendirelim</li><li>Takas ya da satış seçeneğini konuşalım</li></ol>
-  <p class="not">Resmî garanti yok; her ekipmanı kontrol ediyor, gerçek durumunu dürüstçe paylaşıyoruz.</p>
+  <p class="not">Her ikinci el ekipmanı kontrol ediyor, gerçek durumunu dürüstçe paylaşıyoruz. İkinci el ürünlerde resmî garanti belgesi verilmez.</p>
   <a class="btn wa " data-msg="Merhaba, takas / ikinci el için ekipmanımı göstermek istiyorum.
 Ekipman:
 Durumu:" href="https://wa.me/905324803051?text=Merhaba%2C%20takas%20%2F%20ikinci%20el%20i%C3%A7in%20ekipman%C4%B1m%C4%B1%20g%C3%B6stermek%20istiyorum.%0AEkipman%3A%0ADurumu%3A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>Fotoğrafını gönder</span></a>
@@ -295,13 +308,14 @@ Durumu:" href="https://wa.me/905324803051?text=Merhaba%2C%20takas%20%2F%20ikinci
 <section class="blok" id="sahadan">
   <p class="etk">Sahadan</p>
   <h2>Sahadan kareler</h2>
-  <div class="saha"><figure><img src="img/tarim-romorku-yesil-teslimat-700.webp" alt="Yeşil tarım römorku teslimatta. Kasada müşterinin adı yazılı." loading="lazy"><figcaption>Yeşil tarım römorku teslimatta. Kasada müşterinin adı yazılı.</figcaption></figure><figure><img src="img/tarim-romorku-traktor-700.webp" alt="Mavi römork yük aracında, New Holland traktörün yanında." loading="lazy"><figcaption>Mavi römork yük aracında, New Holland traktörün yanında.</figcaption></figure><figure><img src="img/romork-ve-gubre-serpme-700.webp" alt="Römork ve gübre serpme makinesi, müşterimizle birlikte." loading="lazy"><figcaption>Römork ve gübre serpme makinesi, müşterimizle birlikte.</figcaption></figure><figure><img src="img/on-yukleyici-kubota-700.webp" alt="Kubota traktöre takılmış loader kepçe." loading="lazy"><figcaption>Kubota traktöre takılmış loader kepçe.</figcaption></figure><figure><img src="img/tarim-romorku-yuk-araci-700.webp" alt="Mavi tarım römorku teslimat için yük aracında." loading="lazy"><figcaption>Mavi tarım römorku teslimat için yük aracında.</figcaption></figure><figure><img src="img/doner-ot-tirmigi-sevkiyat-700.webp" alt="Atölyemizin önünde teslimat için yükleme." loading="lazy"><figcaption>Atölyemizin önünde teslimat için yükleme.</figcaption></figure></div>
+  <p class="aciklama">Büyütmek için fotoğrafa dokunun.</p>
+  <div class="saha"><figure><button type="button" class="buyut" data-buyuk="img/tarim-romorku-yesil-teslimat-1400.webp" aria-label="Büyüt: Yeşil tarım römorku teslimatta. Kasada müşterinin adı yazılı."><img src="img/tarim-romorku-yesil-teslimat-700.webp" alt="Yeşil tarım römorku teslimatta. Kasada müşterinin adı yazılı." loading="lazy"></button><figcaption>Yeşil tarım römorku teslimatta. Kasada müşterinin adı yazılı.</figcaption></figure><figure><button type="button" class="buyut" data-buyuk="img/tarim-romorku-traktor-1400.webp" aria-label="Büyüt: Mavi römork yük aracında, New Holland traktörün yanında."><img src="img/tarim-romorku-traktor-700.webp" alt="Mavi römork yük aracında, New Holland traktörün yanında." loading="lazy"></button><figcaption>Mavi römork yük aracında, New Holland traktörün yanında.</figcaption></figure><figure><button type="button" class="buyut" data-buyuk="img/romork-ve-gubre-serpme-1400.webp" aria-label="Büyüt: Römork ve gübre serpme makinesi, müşterimizle birlikte."><img src="img/romork-ve-gubre-serpme-700.webp" alt="Römork ve gübre serpme makinesi, müşterimizle birlikte." loading="lazy"></button><figcaption>Römork ve gübre serpme makinesi, müşterimizle birlikte.</figcaption></figure><figure><button type="button" class="buyut" data-buyuk="img/on-yukleyici-kubota-1400.webp" aria-label="Büyüt: Kubota traktöre takılmış loader kepçe."><img src="img/on-yukleyici-kubota-700.webp" alt="Kubota traktöre takılmış loader kepçe." loading="lazy"></button><figcaption>Kubota traktöre takılmış loader kepçe.</figcaption></figure><figure><button type="button" class="buyut" data-buyuk="img/tarim-romorku-yuk-araci-1400.webp" aria-label="Büyüt: Mavi tarım römorku teslimat için yük aracında."><img src="img/tarim-romorku-yuk-araci-700.webp" alt="Mavi tarım römorku teslimat için yük aracında." loading="lazy"></button><figcaption>Mavi tarım römorku teslimat için yük aracında.</figcaption></figure><figure><button type="button" class="buyut" data-buyuk="img/doner-ot-tirmigi-sevkiyat-1400.webp" aria-label="Büyüt: Atölyemizin önünde teslimat için yükleme."><img src="img/doner-ot-tirmigi-sevkiyat-700.webp" alt="Atölyemizin önünde teslimat için yükleme." loading="lazy"></button><figcaption>Atölyemizin önünde teslimat için yükleme.</figcaption></figure></div>
 </section>
 
 <section class="blok sss" id="sss">
   <p class="etk">Sık sorulanlar</p>
   <h2>Merak ettikleriniz</h2>
-  <details><summary>Göksun dışına satış yapıyor musunuz?</summary><p>Evet, Türkiye geneline gönderim yapıyoruz. Şehrinizi belirtin, nakliye seçeneklerini birlikte konuşalım.</p></details><details><summary>Nakliye nasıl oluyor?</summary><p>Nakliyeyi genellikle anlaşmalı kargo / nakliye firmalarıyla sağlıyoruz; size uygun seçeneği birlikte belirleriz.</p></details><details><summary>Fiyatlar ne kadar?</summary><p>Fiyat; ebat, kapasite ve modele göre değişir. Güncel fiyat ve stok için arayın ya da WhatsApp'tan yazın.</p></details><details><summary>Traktörüme uygun ekipmanı nasıl seçerim?</summary><p>Traktörünüzün modelini, beygir gücünü ve yapacağınız işi anlatın; uygun ekipmana birlikte bakalım.</p></details><details><summary>Özel ölçüde üretim yapıyor musunuz?</summary><p>Evet. Kendi atölyemizde imal ettiğimiz römork, kültivatör gibi ekipmanlarda ihtiyacınıza göre özel imalat yapabiliyoruz.</p></details><details><summary>Yedek parça var mı?</summary><p>Sattığımız ve sık kullanılan ekipmanlar için yedek parça bulunduruyoruz.</p></details><details><summary>Bakım ve onarım yapıyor musunuz?</summary><p>Genel bir bakım / onarım servisimiz yok. Kendi ürettiğimiz ve sattığımız ürünler için yedek parça sağlıyor, elimizden geldiğince yönlendiriyoruz.</p></details><details><summary>Ürünlerde garanti var mı?</summary><p>Resmî bir garanti belgesi sunmuyoruz; imal ettiğimiz ve sattığımız her ürünün arkasında duruyoruz. Bir sorun olursa bizi arayın.</p></details>
+  <details><summary>Göksun dışına satış yapıyor musunuz?</summary><p>Evet, Türkiye geneline gönderim yapıyoruz. Şehrinizi belirtin, nakliye seçeneklerini birlikte konuşalım.</p></details><details><summary>Nakliye nasıl oluyor?</summary><p>Nakliyeyi genellikle anlaşmalı kargo / nakliye firmalarıyla sağlıyoruz; size uygun seçeneği birlikte belirleriz.</p></details><details><summary>Fiyatlar ne kadar?</summary><p>Fiyat; ebat, kapasite ve modele göre değişir. Güncel fiyat ve stok için arayın ya da WhatsApp'tan yazın.</p></details><details><summary>Traktörüme uygun ekipmanı nasıl seçerim?</summary><p>Traktörünüzün modelini, beygir gücünü ve yapacağınız işi anlatın; uygun ekipmana birlikte bakalım.</p></details><details><summary>Özel ölçüde üretim yapıyor musunuz?</summary><p>Evet. Kendi atölyemizde imal ettiğimiz römork, kültivatör gibi ekipmanlarda ihtiyacınıza göre özel imalat yapabiliyoruz.</p></details><details><summary>Yedek parça var mı?</summary><p>Sattığımız ve sık kullanılan ekipmanlar için yedek parça bulunduruyoruz.</p></details><details><summary>Bakım ve onarım yapıyor musunuz?</summary><p>Genel bir bakım / onarım servisimiz yok. Kendi ürettiğimiz ve sattığımız ürünler için yedek parça sağlıyor, elimizden geldiğince yönlendiriyoruz.</p></details><details><summary>Ürünlerde garanti var mı?</summary><p>İmal ettiğimiz ve sattığımız her ürünün arkasında duruyoruz; yedek parça desteğini Göksun'daki atölyemizden sağlıyoruz. Bir sorun olursa bizi arayın. Resmî garanti belgesi sunmuyoruz.</p></details>
 </section>
 
 <section class="blok iletisim" id="iletisim">
@@ -318,6 +332,8 @@ Durumu:" href="https://wa.me/905324803051?text=Merhaba%2C%20takas%20%2F%20ikinci
 <p class="alt-bilgi">© 2026 Üçel Tarım Aletleri · <a href="../">Web sitemiz</a></p>
 </div>
 
+<dialog id="kutu" aria-label="Fotoğraf"><form method="dialog"><button class="kapat" aria-label="Kapat">×</button></form><img alt=""><p></p></dialog>
+
 <nav class="cubuk gizli" aria-label="Hızlı iletişim"><div><a class="btn wa " data-msg="Merhaba, Üçel kataloğunu inceledim, bilgi almak istiyorum." href="https://wa.me/905324803051?text=Merhaba%2C%20%C3%9C%C3%A7el%20katalo%C4%9Funu%20inceledim%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>WhatsApp'tan yaz</span></a><a class="btn tel " href="tel:+905324803051"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Ara</span></a></div></nav>
 
 <script>
@@ -326,6 +342,20 @@ Durumu:" href="https://wa.me/905324803051?text=Merhaba%2C%20takas%20%2F%20ikinci
   var ust = document.querySelector('.ust-buton'), cubuk = document.querySelector('.cubuk');
   if (!ust || !('IntersectionObserver' in window)) { cubuk.classList.remove('gizli'); return; }
   new IntersectionObserver(function (e) { cubuk.classList.toggle('gizli', e[0].isIntersecting); }).observe(ust);
+})();
+// Fotoğraf büyütme
+(function () {
+  var d = document.getElementById('kutu');
+  if (!d || !d.showModal) return;
+  document.querySelectorAll('button.buyut').forEach(function (b) {
+    b.addEventListener('click', function () {
+      d.querySelector('img').src = b.getAttribute('data-buyuk');
+      d.querySelector('img').alt = b.querySelector('img').alt;
+      d.querySelector('p').textContent = b.querySelector('img').alt;
+      d.showModal();
+    });
+  });
+  d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
 })();
 // Kaynak etiketi: ?k=instagram → WhatsApp mesajı "(Instagram)" ile başlar; oturum boyunca hatırlanır.
 (function () {
