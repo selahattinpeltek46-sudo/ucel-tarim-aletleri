@@ -15,4 +15,5 @@ window.UCEL_FIYAT = {
   tapan: [],
   kultivator: [],
   loader: [],
+  pulluk: [],
 };
