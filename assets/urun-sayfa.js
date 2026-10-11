@@ -15,7 +15,13 @@
   function waAdres(mesaj) { return 'https://wa.me/' + TEL + '?text=' + encodeURIComponent((kaynak ? '(' + kaynak + ') ' : '') + mesaj); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
-  document.querySelectorAll('a[data-msg]').forEach(function (a) { a.href = waAdres(a.getAttribute('data-msg')); });
+  // Bütün WhatsApp bağlantıları: data-msg varsa o, yoksa bağlantıdaki hazır metin, o da yoksa genel karşılama; başına kaynak etiketi
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (a) {
+    if (a.closest('.mobile-bar')) return;
+    var mesaj = a.getAttribute('data-msg');
+    if (!mesaj) { try { mesaj = new URL(a.href).searchParams.get('text'); } catch (e) {} }
+    a.href = waAdres(mesaj || 'Merhaba, Üçel Tarım Aletleri sitenizden yazıyorum.');
+  });
   document.querySelectorAll('.mobile-bar a[href^="https://wa.me/"]').forEach(function (a) {
     var ad = document.body.getAttribute('data-urun-ad');
     a.href = waAdres(ad ? 'Merhaba, sitenizdeki ' + ad + ' için fiyat almak istiyorum.' : 'Merhaba, Üçel Tarım Aletleri sitenizden yazıyorum.');
