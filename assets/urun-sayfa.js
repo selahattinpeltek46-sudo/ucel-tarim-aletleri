@@ -18,7 +18,7 @@
   document.querySelectorAll('a[data-msg]').forEach(function (a) { a.href = waAdres(a.getAttribute('data-msg')); });
   document.querySelectorAll('.mobile-bar a[href^="https://wa.me/"]').forEach(function (a) {
     var ad = document.body.getAttribute('data-urun-ad');
-    if (ad) a.href = waAdres('Merhaba, sitenizdeki ' + ad + ' için fiyat almak istiyorum.');
+    a.href = waAdres(ad ? 'Merhaba, sitenizdeki ' + ad + ' için fiyat almak istiyorum.' : 'Merhaba, Üçel Tarım Aletleri sitenizden yazıyorum.');
   });
 
   // Fiyat tablosu
@@ -46,7 +46,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var ad = document.body.getAttribute('data-urun-ad') || 'ürün';
-      var satirlar = ['Merhaba, sitenizdeki ' + ad + ' için fiyat almak istiyorum.'];
+      var satirlar = [form.getAttribute('data-giris') || 'Merhaba, sitenizdeki ' + ad + ' için fiyat almak istiyorum.'];
       // Her soru kendi etiketiyle mesaja eklenir: <fieldset data-etiket> (çoklu seçim) ve <input data-etiket>
       form.querySelectorAll('fieldset[data-etiket], input[data-etiket]').forEach(function (alan) {
         var deger;
