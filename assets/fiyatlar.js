@@ -14,4 +14,5 @@ window.UCEL_FIYAT = {
   romork: [],
   tapan: [],
   kultivator: [],
+  loader: [],
 };
