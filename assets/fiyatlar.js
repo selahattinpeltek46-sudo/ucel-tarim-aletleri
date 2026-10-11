@@ -13,4 +13,5 @@ window.UCEL_FIYAT = {
   not: '',
   romork: [],
   tapan: [],
+  kultivator: [],
 };
