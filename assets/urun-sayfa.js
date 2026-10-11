@@ -45,14 +45,14 @@
   document.querySelectorAll('form.us-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var fd = new FormData(form);
       var ad = document.body.getAttribute('data-urun-ad') || 'ürün';
-      var yuk = fd.getAll('yuk');
       var satirlar = ['Merhaba, sitenizdeki ' + ad + ' için fiyat almak istiyorum.'];
-      if (yuk.length) satirlar.push((form.getAttribute('data-yuk-soru') || 'Taşıyacağım yük') + ': ' + yuk.join(', '));
-      [['traktor', 'Traktörüm'], ['hp', 'Beygir gücü'], ['il', 'İl / ilçe'], ['not', 'İsteğim']].forEach(function (x) {
-        var v = (fd.get(x[0]) || '').trim();
-        if (v) satirlar.push(x[1] + ': ' + v + (x[0] === 'hp' && /^\d+$/.test(v) ? ' HP' : ''));
+      // Her soru kendi etiketiyle mesaja eklenir: <fieldset data-etiket> (çoklu seçim) ve <input data-etiket>
+      form.querySelectorAll('fieldset[data-etiket], input[data-etiket]').forEach(function (alan) {
+        var deger;
+        if (alan.tagName === 'FIELDSET') deger = [].map.call(alan.querySelectorAll('input:checked'), function (i) { return i.value; }).join(', ');
+        else deger = alan.value.trim() + (alan.getAttribute('data-birim') && /^\d+$/.test(alan.value.trim()) ? ' ' + alan.getAttribute('data-birim') : '');
+        if (deger.trim()) satirlar.push(alan.getAttribute('data-etiket') + ': ' + deger);
       });
       window.open(waAdres(satirlar.join('\n')), '_blank', 'noopener');
     });

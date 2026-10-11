@@ -919,3 +919,8 @@ button.us-buyut:focus-visible { outline: 2px solid var(--gold-light); }
   .nav-cta-mobile { display: inline-flex; border: 1px solid var(--gold); color: var(--gold-light); text-decoration: none; padding: 12px 28px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
   .nav-toggle { display: flex; }
 }
+.us-cizim { margin: 0; background: var(--ink-2); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+.us-cizim svg { width: 100%; height: auto; display: block; }
+.us-cizim figcaption { text-align: center; color: var(--white-dim); font-size: 15px; margin-top: 8px; } .us-cizim figcaption b { color: var(--gold-light); }
+.us-adim b a { color: var(--gold-light); }
+@media (max-width: 820px) { .us-cizim { order: 0; } }

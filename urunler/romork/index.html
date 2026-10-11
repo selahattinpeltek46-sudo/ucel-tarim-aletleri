@@ -10,13 +10,13 @@
 <meta name="description" content="Göksun'da kendi atölyemizde imal ettiğimiz tarım römorku. Kasa rengi ve yazısı sizin seçiminiz, özel ölçü, Türkiye geneline gönderim. Fiyat için formu doldurun.">
 <link rel="canonical" href="https://selahattinpeltek46-sudo.github.io/ucel-tarim-aletleri/urunler/romork/">
 <meta property="og:type" content="product">
-<meta property="og:title" content="Römork Göksun | Üçel Tarım Aletleri">
+<meta property="og:title" content="Tarım Römorku · Göksun İmalatı | Üçel Tarım Aletleri">
 <meta property="og:description" content="Göksun'da kendi atölyemizde imal ettiğimiz tarım römorku. Kasa rengi ve yazısı sizin seçiminiz, özel ölçü, Türkiye geneline gönderim. Fiyat için formu doldurun.">
 <meta property="og:url" content="https://selahattinpeltek46-sudo.github.io/ucel-tarim-aletleri/urunler/romork/">
 <meta property="og:image" content="https://selahattinpeltek46-sudo.github.io/ucel-tarim-aletleri/assets/romork-yesil-goksun.jpg">
 <meta property="og:locale" content="tr_TR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Römork Göksun | Üçel Tarım Aletleri">
+<meta name="twitter:title" content="Tarım Römorku · Göksun İmalatı | Üçel Tarım Aletleri">
 <meta name="twitter:description" content="Göksun'da kendi atölyemizde imal ettiğimiz tarım römorku. Kasa rengi ve yazısı sizin seçiminiz, özel ölçü, Türkiye geneline gönderim. Fiyat için formu doldurun.">
 <meta name="twitter:image" content="https://selahattinpeltek46-sudo.github.io/ucel-tarim-aletleri/assets/romork-yesil-goksun.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -198,7 +198,7 @@
       <!-- 3. Traktörüme uyar mı: tek form, mesaj hazır gider -->
       <form class="us-form" id="romorkForm">
         <p class="us-form-baslik">Size uygun römork ve fiyatı için</p>
-        <fieldset>
+        <fieldset data-etiket="Taşıyacağım yük">
           <legend>1. Ne taşıyacaksınız?</legend>
           <div class="us-secim">
             <label><input type="checkbox" name="yuk" value="Tarla ürünü"><span>Tarla ürünü</span></label>
@@ -207,10 +207,10 @@
             <label><input type="checkbox" name="yuk" value="Hayvancılık işleri"><span>Hayvancılık işleri</span></label>
           </div>
         </fieldset>
-        <label class="us-alan">2. Traktörünüz (marka / model)<input type="text" name="traktor" placeholder="Örn. New Holland TT50" autocomplete="off"></label>
-        <label class="us-alan">3. Beygir gücü (HP)<input type="text" name="hp" inputmode="numeric" placeholder="Örn. 50" autocomplete="off"></label>
-        <label class="us-alan">4. İl / ilçe<input type="text" name="il" placeholder="Örn. Elbistan / Kahramanmaraş" autocomplete="off"></label>
-        <label class="us-alan">İstediğiniz ölçü, renk ya da kasa yazısı (isteğe bağlı)<input type="text" name="not" placeholder="Örn. mavi kasa, üzerine isim" autocomplete="off"></label>
+        <label class="us-alan">2. Traktörünüz (marka / model)<input type="text" name="traktor" data-etiket="Traktörüm" placeholder="Örn. New Holland TT50" autocomplete="off"></label>
+        <label class="us-alan">3. Beygir gücü (HP)<input type="text" name="hp" data-etiket="Beygir gücü" data-birim="HP" inputmode="numeric" placeholder="Örn. 50" autocomplete="off"></label>
+        <label class="us-alan">4. İl / ilçe<input type="text" name="il" data-etiket="İl / ilçe" placeholder="Örn. Elbistan / Kahramanmaraş" autocomplete="off"></label>
+        <label class="us-alan">İstediğiniz ölçü, renk ya da kasa yazısı (isteğe bağlı)<input type="text" name="not" data-etiket="İsteğim" placeholder="Örn. mavi kasa, üzerine isim" autocomplete="off"></label>
         <button type="submit" class="us-btn us-wa us-tam">WhatsApp'tan fiyat iste</button>
         <p class="us-kucuk">Boş bıraktığınız soruları WhatsApp'ta birlikte tamamlarız.</p>
       </form>
@@ -313,6 +313,7 @@
       <a href="../../urunler/romork/">Römork</a>
       <a href="../../urunler/pulluk/">Pulluk</a>
       <a href="../../urunler/kultivator/">Kültivatör</a>
+      <a href="../../urunler/tapan/">Tapan</a>
       <a href="../../urunler/mibzer/">Mibzer</a>
       <a href="../../ikinci-el/">İkinci El</a>
       <a href="../../takas/">Takas</a>
