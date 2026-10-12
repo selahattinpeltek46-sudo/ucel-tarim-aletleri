@@ -38,7 +38,7 @@ section, .urun { scroll-margin-top: 8px; }
 /* üst */
 .ust { background: var(--d); color: #fff; padding: 18px 18px 22px; position: relative; overflow: hidden; }
 .ust::after { content: ''; position: absolute; right: -56px; top: 0; bottom: 0; width: 104px; background: var(--k); transform: skewX(-18deg); }
-.marka { display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
+.marka { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
 .marka img { width: 64px; border-radius: 6px; }
 .marka b { display: block; font: 700 18px/1.1 'Oswald'; letter-spacing: 1.5px; }
 .marka span { font-size: 14px; color: #b7b2aa; letter-spacing: .5px; }
@@ -140,7 +140,7 @@ dialog#kutu .kapat { position: fixed; top: 12px; right: 12px; width: 48px; heigh
 <body>
 <div class="sayfa">
 <header class="ust">
-  <div class="marka"><img src="img/logo.webp" alt="Üçel logosu" width="64" height="26"><div><b>ÜÇEL TARIM ALETLERİ</b><span>Göksun · Kahramanmaraş</span></div></div>
+  <a class="marka" href="../" title="Üçel Tarım Aletleri ana sayfa"><img src="img/logo.webp" alt="Üçel logosu" width="64" height="26"><div><b>ÜÇEL TARIM ALETLERİ</b><span>Göksun · Kahramanmaraş</span></div></a>
   <p class="etk">Ürün Kataloğu 2026</p>
   <h1>Tarlada da, yolda da sağlam iş.</h1>
   <p class="alt">Göksun'da üretiyoruz. Türkiye'ye ulaştırıyoruz.</p>
