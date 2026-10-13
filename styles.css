@@ -839,3 +839,21 @@ a.b2b-card p { color: var(--gold-light); font-weight: 600; margin: 0; }
   .nav-cta-mobile { display: inline-flex; border: 1px solid var(--gold); color: var(--gold-light); text-decoration: none; padding: 12px 28px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
   .nav-toggle { display: flex; }
 }
+
+/* Beyaz üst menü + K3 logo (13 Ekim 2026) */
+.navbar { background: rgba(255,255,255,.96); border-bottom: 1px solid #e6e2db; box-shadow: 0 1px 10px rgba(0,0,0,.06); }
+.navbar .logo-mark { height: 44px; border-radius: 0; overflow: visible; }
+.navbar .logo-text strong { color: #1B1B1D; font-size: 20px; font-weight: 700; letter-spacing: 4px; }
+.navbar .logo-text span { color: #8a6a3c; letter-spacing: 3.4px; margin-top: 6px; }
+.nav-links a { color: #3a3a3d; }
+.nav-links a:hover { color: #1B1B1D; }
+.nav-links a::after { background: #A9824F; }
+.navbar .nav-cta { color: #8a6a3c; border-color: #C9A66E; }
+.navbar .nav-cta:hover { color: #fff; background: #A9824F; border-color: #A9824F; }
+.nav-toggle span { background: #1B1B1D; }
+.footer .logo-mark { height: 44px; border-radius: 0; }
+@media (max-width: 1365px) {
+  .nav-links { background: #fff; }
+  .nav-links a { color: #1B1B1D; font-size: 16px; }
+  .nav-cta-mobile { color: #8a6a3c !important; border-color: #C9A66E !important; }
+}
